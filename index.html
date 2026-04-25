@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Berry & Cream Ice Cream</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/06fab0dff1.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="site-logo.png">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <h2 class="logo">Berry<span>&</span>Cream</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <!-- <li><a href="#about">About</a></li> -->
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html">Admin</a></li>
+    </ul>
+
+      <!-- icon for mobile view -->
+<i class="fa-solid fa-bars" onclick="openMenu()"></i>
+
+<div id="mobileMenu">
+  <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="login.html">Admin</a></li>
+  </ul>
+</div>
+
+
+    <div class="cart-info" onclick="openCartModal()">
+      🛒 Cart: <span id="cart-count">0</span> | Rs <span id="cart-total">0</span>
+      <div class="header-btn">Checkout</div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-center">
+    <h1>Fresh & Natural Ice Cream</h1>
+    <p>Made with real ingredients & love 🍃</p>
+    <a href="#menu" class="btn">Order Now</a>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>Customer Favorites</h2>
+  <div class="grid" id="products"></div>
+
+  <div style="text-align:center; margin-top:30px;">
+    <button id="open-cart-btn" class="btn">Go to Checkout</button>
+  </div>
+</section>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p>Total: Rs <span id="cart-modal-total">0</span></p>
+    <button class="btn" id="checkout-btn" onclick="openForm()" disabled>Checkout</button>
+    <button class="btn" onclick="closeCartModal()" style="background:#004200; margin-top:10px;">Close</button>
+  </div>
+</div>
+
+<!-- Order Form Modal -->
+<div id="order-form-modal" class="modal">
+  <div class="modal-content">
+    <h3>Order Form</h3>
+    <form id="orderForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <textarea id="address" placeholder="Delivery Address" required></textarea>
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+    <button class="btn" onclick="closeForm()" style="background:#004200; margin-top:10px;">Close</button>
+  </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div id="confirmation-modal" class="modal">
+  <div class="modal-content">
+    <h3>Order Submitted!</h3>
+    <p>Your order has been received. Thank you!</p>
+    <button class="btn" onclick="closeConfirmation()" style="margin-top:10px;">Close</button>
+  </div>
+</div>
+
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: hello@berrycream.com</p>
+  <p>Phone: +92 300 1234567</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Berry & Cream</h4>
+      <p>Premium handcrafted ice cream.</p>
+    </div>
+    <div>
+      <h4>Site Map</h4>
+      <p><a href="#home">Home</a></p>
+      <p><a href="#menu">Menu</a></p>
+      <p><a href="#contact">Contact</a></p>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <p><a href="https://www.instagram.com/safarigirl_57/" target="_blank">Instagram</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61560295521905" target="_blank">Facebook</a></p>
+<p><a href="https://www.tiktok.com/@safarigirl_57?lang=en" target="_blank">TikTok</a></p>
+    </div>
+  </div>
+  <p class="copy">© 2026 Berry & Cream</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
